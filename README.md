@@ -1,0 +1,4 @@
+CrazyJava
+=========
+
+For Java Learning
