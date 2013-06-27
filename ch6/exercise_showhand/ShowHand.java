@@ -20,6 +20,7 @@ public class ShowHand {
 				player.cards[i]=null;
 			}
 		}
+
 		cards.clear();
 		for(int i=1;i<55;i++){
 			cards.add(String.valueOf(i));
@@ -35,6 +36,7 @@ public class ShowHand {
 		System.out.println("The Point is reset");
 	}
 	
+
 	public void resetPlayer(){
 		for(Player player:players){
 			player.isPlay = true;
@@ -51,6 +53,7 @@ public class ShowHand {
 	public void start(){
 		round=1;
 		players.clear();
+		round=1;
 		players.add(player1);
 		players.add(player2);
 		players.add(player3);
