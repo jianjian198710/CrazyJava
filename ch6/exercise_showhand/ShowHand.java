@@ -2,18 +2,23 @@ package exercise_showhand;
 
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.TreeSet;
 
 public class ShowHand {
 	int leftCards;
-	int round=1;
-	int showHandCard;
-	LinkedList<Player> players = new LinkedList<Player>();
+	int round;
+	
+	TreeSet<Player> players = new TreeSet<Player>();
 	LinkedList<String> cards = new LinkedList<String>();
 	
 	Player player1 = new Player("Player1",1); 
-	Player player2 = new Player("Player2",2);
-	Player player3 = new Player("Player3",3);
+	Player player2 = new Player("Player2",3);
+	Player player3 = new Player("Player3",2);
 	
+	
+	/*
+	 * Reset all players' cards to null and reset the cards
+	 */
 	public void resetCard(){
 		for(Player player:players){
 			for(int i=0;i<5;i++){
@@ -29,14 +34,19 @@ public class ShowHand {
 		System.out.println("The "+cards.size()+" card has reset");
 	}
 	
+	/*
+	 * Reset all players' points to zero
+	 */
 	public void resetPoint(){
 		for(Player player:players){
 			player.total = 0;
 		}
-		System.out.println("The Point is reset");
+		System.out.println("The Point is reset to 0");
 	}
 	
-
+	/*
+	 * Reset all players' to Play
+	 */
 	public void resetPlayer(){
 		for(Player player:players){
 			player.isPlay = true;
@@ -66,11 +76,12 @@ public class ShowHand {
 					player.cards[round-1]=cards.getFirst();
 					System.out.println(player.name+" cards is: "+Arrays.toString(player.cards));
 					cards.removeFirst();
-					leftCards = 54-cards.size();
+					leftCards = cards.size();
 				}
 			}
 			round=round+1;
 		}else{
+			System.out.println("The number of left cards: "+leftCards);
 			System.out.println("Game over!");
 		}
 		if(round>=6){
@@ -78,9 +89,6 @@ public class ShowHand {
 			round=0;
 		}
 	}
-	
-	
-
 	
 	public void showHand(){
 		for(Player player:players){
@@ -94,30 +102,4 @@ public class ShowHand {
 		
 	}
 	
-	
-	public static void main(String[] args){
-		ShowHand sh = new ShowHand();
-		sh.start();
-		sh.resetAll();
-		sh.sendCard();
-		sh.sendCard();
-		sh.sendCard();
-//		sh.player1.giveUp();
-		sh.sendCard();
-		sh.sendCard();
-		sh.sendCard();
-		sh.sendCard();
-		
-		sh.start();
-		sh.resetAll();
-		sh.sendCard();
-		sh.sendCard();
-		sh.sendCard();
-		sh.sendCard();
-		sh.sendCard();
-		sh.sendCard();
-		sh.sendCard();
-		sh.sendCard();
-		
-	}
 } 
