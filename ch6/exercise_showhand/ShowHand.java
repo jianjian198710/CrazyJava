@@ -53,13 +53,6 @@ public class ShowHand {
 		}
 	}
 	
-	public void resetAll(){
-		resetCard();
-		resetPoint();
-		resetPlayer();
-	}
-	
-	
 	public void start(){
 		players.clear();
 		round=1;
@@ -67,6 +60,13 @@ public class ShowHand {
 		players.add(player2);
 		players.add(player3);
 		System.out.println("Game start!");
+	}
+	
+	public void resetAndStart(){
+		start();
+		resetCard();
+		resetPoint();
+		resetPlayer();
 	}
 	
 	public void sendCard(){

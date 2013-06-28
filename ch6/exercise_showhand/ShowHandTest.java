@@ -8,8 +8,7 @@ public class ShowHandTest {
 	 */
 	public static void main(String[] args) {
 		ShowHand sh = new ShowHand();
-		sh.start();
-		sh.resetAll();
+		sh.resetAndStart();
 		sh.sendCard();
 		sh.sendCard();
 		sh.sendCard();
@@ -19,8 +18,7 @@ public class ShowHandTest {
 		sh.sendCard();
 		sh.sendCard();
 		
-		sh.start();
-		sh.resetAll();
+		sh.resetAndStart();
 		sh.sendCard();
 		sh.sendCard();
 		sh.sendCard();
