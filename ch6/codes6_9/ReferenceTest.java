@@ -13,8 +13,6 @@ public class ReferenceTest {
 		System.out.println(wf.get());
 		System.gc();
 		System.out.println(wf.get());
-		
-
 	}
 
 }
