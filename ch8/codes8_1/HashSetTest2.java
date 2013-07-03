@@ -19,7 +19,7 @@ public class HashSetTest2 {
 		
 		Iterator<R> it = hs.iterator();
 		R first = it.next();
-		//将第一个元素的值改为-3
+		//将第一个元素的值改为-3，HashSet中出現兩個相同的-3
 		first.count = -3;
 		//出现两个count：-3,但是其实第一个在原来count值为5的Hash表的位置上
 		System.out.println(hs);
