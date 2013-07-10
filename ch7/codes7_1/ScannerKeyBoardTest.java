@@ -10,7 +10,7 @@ public class ScannerKeyBoardTest {
 		while(sc.hasNext()){
 			System.out.println("The input from keyboard is: "+sc.next());
 		}
-
+		sc.close();
 	}
 
 }

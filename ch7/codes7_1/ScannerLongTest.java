@@ -9,6 +9,7 @@ public class ScannerLongTest {
 		while(sc.hasNextLong()){
 			System.out.println("The input from keyborad is: "+sc.nextLong());
 		}
+		sc.close();
 	}
-
+		
 }
