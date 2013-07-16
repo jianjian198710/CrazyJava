@@ -1,6 +1,7 @@
 package exercise_showhand;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.TreeSet;
 
@@ -10,6 +11,8 @@ public class ShowHand {
 	
 	TreeSet<Player> players = new TreeSet<Player>();
 	LinkedList<String> cards = new LinkedList<String>();
+	String[] strs1 = {"ºìÌÒ","ºÚÌÒ","²Ý»¨","·½¿é"};
+	String[] strs2 = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
 	
 	Player player1 = new Player("Player1",1); 
 	Player player2 = new Player("Player2",3);
@@ -27,9 +30,12 @@ public class ShowHand {
 		}
 
 		cards.clear();
-		for(int i=1;i<55;i++){
-			cards.add(String.valueOf(i));
+		for(int i=0;i<strs1.length;i++){
+			for(int j=0;j<strs2.length;j++){
+				cards.add(strs1[i]+strs2[j]);
+			}
 		}
+		Collections.shuffle(cards);
 		leftCards = cards.size();
 		System.out.println("The "+cards.size()+" card has reset");
 	}
@@ -70,7 +76,8 @@ public class ShowHand {
 	}
 	
 	public void sendCard(){
-		if(round!=0){
+		System.out.println("ROUND: "+round);
+		if(round<=5&&round>0){
 			for(Player player:players){
 				if(player.isPlay == true){
 					player.cards[round-1]=cards.getFirst();
@@ -84,19 +91,12 @@ public class ShowHand {
 			System.out.println("The number of left cards: "+leftCards);
 			System.out.println("Game over!");
 		}
-		if(round>=6){
-			showHand();
-			round=0;
-		}
 	}
 	
 	public void showHand(){
 		for(Player player:players){
 			if(player.isPlay == true){
-				for(int i=0;i<5;i++){
-					player.total = Integer.parseInt(player.cards[i])+player.total;
-				}
-				System.out.println(player.name+" total point is: "+player.total);
+				System.out.println(player);
 			}
 		}
 		

@@ -1,5 +1,7 @@
 package exercise_showhand;
 
+import java.util.Arrays;
+
 public class Player implements Comparable<Player> {
 	
 	String name;
@@ -20,7 +22,7 @@ public class Player implements Comparable<Player> {
 	
 	
 	public String toString(){
-		return "PlayerName:"+this.name+", isPlay:"+this.isPlay+", location:"+this.location+", cards:"+cards.toString();
+		return "PlayerName:"+this.name+", isPlay:"+this.isPlay+", location:"+this.location+", cards:"+Arrays.toString(cards);
 	}
 
 	@Override
