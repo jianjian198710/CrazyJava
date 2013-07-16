@@ -7,12 +7,13 @@ import java.util.List;
 public class MyUtils {
 
 	/**
-	 * @param args
+	 * 測試通配符下限<? super T>
 	 */
 	public static <T> T copy(Collection<? super T> dest, Collection<T> src){
 		T last = null;
 		for(T ele:src){
 			last = ele;
+			//爲什麽這裡可以加進去,dest沒法確定類型啊！！！！！！！
 			dest.add(ele);
 		}
 		return last;
