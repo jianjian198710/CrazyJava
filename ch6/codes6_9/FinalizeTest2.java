@@ -11,6 +11,7 @@ public class FinalizeTest2 {
 	public static void main(String[] args) {
 		new FinalizeTest2();
 		Runtime.getRuntime().gc();
+		//System和Runtime類都提供了runFinalization()方法,可以強制GC調用系統中可恢復對象的finalize方法
 		Runtime.getRuntime().runFinalization();
 		ft.info();
 	}
