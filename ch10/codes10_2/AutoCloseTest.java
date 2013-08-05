@@ -13,8 +13,8 @@ public class AutoCloseTest {
 	 * 爲了保證自動關閉這些資源,這些資源必須實現AutoCloseable或者Closeable接口,一般的BufferedReader等都實現了該類
 	 * AutoCloseable是Closeable的子藉口,Closeable接口里的close()方法聲明拋出了IOException,因此實現類在實現close()方法只能拋出IOException方法,
 	 * 而AutoCloseable接口里的close()方法聲明跑出了Exception,因此實現類實現該方法時可以拋出任何異常
-	 * @throws IOException 
-	 * @throws FileNotFoundException 
+	 * Closeable @throws IOException 
+	 * AutoCloseable @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) {
 		try(BufferedReader br = new BufferedReader(new FileReader("ch10/codes10_2/AutoCloseTest.java"));

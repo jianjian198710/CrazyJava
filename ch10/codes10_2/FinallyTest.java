@@ -25,7 +25,7 @@ public class FinallyTest {
 					ioe.printStackTrace();
 				}
 			}
-			System.out.println("Excute Finally Part!");
+			System.out.println("Execute Finally Part!");
 		}
 	}
 

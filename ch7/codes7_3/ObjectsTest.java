@@ -3,7 +3,9 @@ package codes7_3;
 import java.util.Objects;
 
 public class ObjectsTest {
-
+	/*
+	 * œyÔ‡Objectsî
+	 */
 	static ObjectsTest obj;
 	public static void main(String[] args) {
 		System.out.println(Objects.toString(obj));

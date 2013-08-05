@@ -5,7 +5,7 @@ public class RunTests {
 	 * œyÔ‡˜ËÓ›ÌŽÀí
 	 */
 	public static void main(String[] args) throws Exception {
-		ProcessorTest.process("MyTest");
+		ProcessorTest.process("codes14_3.MyTest");
 	}
 
 }
