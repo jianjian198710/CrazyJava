@@ -1,5 +1,7 @@
 package codes7_3;
-
+/*
+ * 進行深度克隆,需要自己進行遞歸克隆,即保證所有引用類型的Field值所引用的對象都被複製了
+ */
 public class CloneDeepTest {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
@@ -20,6 +22,7 @@ class AddressDeep implements Cloneable{
 		this.detail = detail;
 	}
 	
+	//保證UserDeep對象的AddressDeep引用也克隆
 	public AddressDeep clone() throws CloneNotSupportedException{
 		return (AddressDeep)super.clone();
 	}
