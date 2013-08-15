@@ -12,10 +12,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class ForkJoinPoolTest {
 
-	/**
-	 * @param args
-	 * @throws InterruptedException 
-	 */
 	public static void main(String[] args) throws InterruptedException {
 		ForkJoinPool pool = new ForkJoinPool();
 		//提交可分解的任務
