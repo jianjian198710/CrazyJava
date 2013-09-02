@@ -5,10 +5,10 @@ import java.util.Iterator;
 
 public class HashSetTest2 {
 
-	/**
-	 * The test is to verify when the fields of object which in the HashSet change, 
-	 * maybe the HashSet has two same object.
-	 */
+/*
+ * (1)HashSet不是同步的,并且集合元素可以是null
+ * (2)如果向HashSet中添加一个可变对象后,后面程序修改了该可变对象的Field,则可能导致它与集合中的其他元素相同
+ */
 	public static void main(String[] args) {
 		HashSet<R> hs = new HashSet<R>();
 		hs.add(new R(5));

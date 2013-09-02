@@ -7,6 +7,7 @@ public class CloneDeepTest {
 	public static void main(String[] args) throws CloneNotSupportedException {
 		UserDeep user1 = new UserDeep(29);
 		UserDeep user2 = user1.clone();
+		//克隆所引用的对象
 		user2.address = user1.address.clone();
 		
 		System.out.println(user1 == user2);

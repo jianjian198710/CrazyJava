@@ -11,7 +11,7 @@ public class MatchesTest {
 		for(String str : emails){
 			Matcher m = p.matcher(str);
 			/*
-			 * 當匹配的String長與正則表達式 lookingAt()可用於返回String的開頭是否與正則表達式匹配 比如正則是Java String是Java is easy？ 
+			 * 當匹配的String長與正則表達式 lookingAt()可用於返回String的開頭是否與正則表達式匹配 比如正則是Java 匹配String是Java is easy？ 
 			 * lookingAt()返回true
 			 * 
 			 * reset(str)用於matcher將str排在第一個位置

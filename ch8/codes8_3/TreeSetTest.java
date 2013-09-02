@@ -1,12 +1,15 @@
 package codes8_3;
 
 import java.util.TreeSet;
-
+/*
+ * (1)TreeSet是SortedSet接口的实现类
+ * (2)TreeSet采用红黑树的数据结构来存储集合元素,TreeSet支持两种排序方法:自然排序和定制排序
+ * 	  自然排序:TreeSet会调用集合元素的compareTo(Object obj)方法(来自Comparable接口)来比较元素之间的大小的关系
+ * (3)向TreeSet中添加的应该是同一个类的对象
+ * 
+ */
 public class TreeSetTest {
 
-	/**
-	 * To test some methods of TreeSet,such as first(),last(),headset(),tailset(),lower(),higher()
-	 */
 	public static void main(String[] args) {
 		TreeSet<Integer> nums = new TreeSet<Integer>();
 		nums.add(5);

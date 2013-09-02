@@ -9,6 +9,10 @@ public class StartEnd {
 		String s ="Java is very easy?";
 		Matcher m = Pattern.compile("\\w+").matcher(s);
 		while(m.find()){
+			/*
+			 * start()返回上一次与Pattern匹配的字符串在目标字符串中的开始位置
+			 * end()返回上一次与Pattern匹配的字符串在目标字符串中的结束位置+1
+			 */
 			System.out.println(m.group()+" Start: "+m.start()+" End: "+m.end());
 		}
 	}
