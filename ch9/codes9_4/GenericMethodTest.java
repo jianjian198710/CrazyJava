@@ -2,12 +2,12 @@ package codes9_4;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
+/*
+ * (1)所谓泛型方法,就是在声明方法时定义一个或多个类型形参
+ * (2)泛型方法允许类型形参被用来表示方法的一个或多个形参之间的类型依赖关系,或者方法返回值与参数之间的类型依赖关系
+ */
 public class GenericMethodTest {
-
-	/**
-	 * 測試牛逼的泛型方法
-	 */
+	//使用一个泛型方法,该泛型方法中带一个T类型形参,所有的类型形参声明放在方法修饰符和方法返回值类型之间
 	static <T> void fromArrayToCollection(T[] a, Collection<T> c){
 		for(T o:a){
 			c.add(o);

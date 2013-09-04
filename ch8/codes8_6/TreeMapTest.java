@@ -1,12 +1,12 @@
 package codes8_6;
 
 import java.util.TreeMap;
-
+/*
+ * (1)TreeMap实现了SortedMap子接口
+ * (2)TreeMap中判断两个Key相等的标准是:两个key通过compareTo()方法返回0.
+ */
 public class TreeMapTest {
 
-	/**
-	 * 測試TreeMap類
-	 */
 	public static void main(String[] args) {
 		TreeMap<R,String> tm = new TreeMap<R,String>();
 		tm.put(new R(3),"Crazy Java");

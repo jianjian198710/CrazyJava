@@ -5,8 +5,11 @@ import java.util.HashMap;
 public class HashMapTest {
 
 	/**
-	 * 测试HashMap判斷兩個Key相等的標準是,equal()返回true,hashCode值相同
-	 * 判斷兩個value的標準是,equal()返回true
+	 * (1)测试HashMap判斷兩個Key相等的標準是,equal()返回true,hashCode值相同
+	 * 	    判斷兩個value的標準是,equal()返回true
+	 * (2)Map中封装了一个内部类Entry
+	 * (3)负载因子 size/capacity HashSet和HashMap,Hashtable默认的"负载极限"为0.75，当hash
+	 * 	    表的3/4已经被填满时,hash表会发生refashing
 	 */
 	public static void main(String[] args) {
 		HashMap map = new HashMap();

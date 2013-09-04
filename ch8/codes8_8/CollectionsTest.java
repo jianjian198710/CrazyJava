@@ -22,7 +22,7 @@ public class CollectionsTest {
 		System.out.print("Collections.sort: ");
 		Collections.sort(nums);
 		System.out.println(nums);
-		
+		//对List集合元素进行随即排序
 		System.out.print("Collections.shuffle: ");
 		Collections.shuffle(nums);
 		System.out.println(nums);
@@ -35,7 +35,7 @@ public class CollectionsTest {
 		System.out.println(Collections.max(nums));
 		System.out.print("Collections.min: ");
 		System.out.println(Collections.min(nums));
-		
+		//使用一个新值newVal替换List对象的所有旧值oldVal
 		System.out.print("Collections.repalceAll: ");
 		System.out.println(Collections.replaceAll(nums, 0, 1));
 		

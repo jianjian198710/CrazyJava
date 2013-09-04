@@ -6,11 +6,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
-
+/*
+ * Properties是Hashtable的子类,因此线程安全
+ */
 public class PropertiesTest {
-	/**
-	 *  測試Properties類
-	 */
+	
 	public static void main(String[] args) {
 		Properties props = new Properties();
 		props.setProperty("username", "jianjian");
