@@ -14,7 +14,7 @@ public class FinallyTest {
 			fls = new FileInputStream("a.txt");
 		}catch(IOException ioe){
 			System.out.println(ioe.getMessage());
-			//退出JVM
+			//退出JVM,Finally块不会执行
 //			Runtime.getRuntime().exit(1);
 			return;
 		}finally{

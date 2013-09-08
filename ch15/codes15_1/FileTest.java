@@ -5,8 +5,7 @@ import java.io.IOException;
 
 public class FileTest {
 	/**
-	 * 測試File類的一些方法
-	 * @throws IOException 
+	 * 不管是文件还是目录都是使用File来操作的
 	 */
 	public static void main(String[] args) throws IOException {
 		//file指代相對路徑當前目錄,即根目錄..

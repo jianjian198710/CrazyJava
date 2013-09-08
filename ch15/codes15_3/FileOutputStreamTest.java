@@ -8,6 +8,7 @@ public class FileOutputStreamTest {
 	/**
 	 * 測試節點流
 	 * write(int c),write(byte[] b),write(byte[] b,int off,int len)三種方法
+	 * 在执行close()方法之前,自动执行输出流的flush()方法
 	 */
 	public static void main(String[] args) {
 		try(FileInputStream fis = new FileInputStream("ch15/codes15_3/FileOutputStreamTest.java");

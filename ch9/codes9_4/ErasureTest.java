@@ -8,10 +8,12 @@ public class ErasureTest {
 	public static void main(String[] args) {
 		Apple<Integer> a = new Apple<Integer>(5);
 		Integer as = a.getSize();
-		//Apple b的類型為Apple<Number>
+		//把a对象赋给Apple变量,丢失尖括号里的类型信息
 		Apple b = a;
+		//b只知道size的类型是Number
 		Number size1 = b.getSize();
 		System.out.println(size1);
+		//下面代码引起编译错误
 //		Integer size2 = b.getSize();
 	}
 
