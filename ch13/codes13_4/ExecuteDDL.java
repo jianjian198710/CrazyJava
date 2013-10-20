@@ -1,12 +1,12 @@
-package codes13_1;
+package codes13_4;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-public class ExecuteDML {
+public class ExecuteDDL {
 
-	public void insertData(String sql)throws Exception{
+	public void createTable(String sql)throws Exception{
 		Class.forName("com.mysql.jdbc.Driver");
 		String url = "jdbc:mysql://127.0.0.1:3306/jianjian";
 		String user = "root";
@@ -17,8 +17,9 @@ public class ExecuteDML {
 		}
 	}
 	public static void main(String[] args) throws Exception {
-		ExecuteDML ed = new ExecuteDML();
-		ed.insertData("insert into jdbc_test(jdbc_name,jdbc_desc) values ('AAA','AAA_DESC'),('BBB','BBB_DESC');");
+		ExecuteDDL ed = new ExecuteDDL();
+		ed.createTable("create table jdbc_test"+"(jdbc_id int auto_increment primary key,"+"jdbc_name varchar(255),"+"jdbc_desc varchar(255));");
+		System.out.println("------建表成功-----");
 	}
 
 }
